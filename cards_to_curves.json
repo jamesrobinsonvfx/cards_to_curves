@@ -1,0 +1,23 @@
+{
+    "enable": true,
+    "env": [
+        {
+            "CARDS2CURVES_INSTALL_DIR": "$HOUDINI_PACKAGE_PATH/cards_to_curves"
+        },
+        {
+            "CARDS2CURVES_BUILD_DIR": [
+                {
+                    "houdini_version >= '18.5'": "$CARDS2CURVES_INSTALL_DIR/houdini18.5"
+                }
+            ]
+        },
+        {
+            "HOUDINI_OTLSCAN_PATH": "$CARDS2CURVES_BUILD_DIR/hda"
+        }
+    ],
+    "path": [
+        {
+            "houdini_version >= '18.5'": "$CARDS2CURVES_BUILD_DIR"
+        }
+    ]
+}
